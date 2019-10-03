@@ -5,6 +5,7 @@ function SignCard(props) {
   return (
     <div
       className="card"
+      aria-label= "Zodiac Sign"
       onClick={() => props.handleGuess(props.id)}
     >
       <img src={props.image} className="card-img" alt={props.sign} />

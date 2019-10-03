@@ -15,11 +15,6 @@ class App extends Component {
     message: "Welcome! Click to start!"
   };
 
-  // TODO check to see if i really need to use this Headers, seems like maybe not
-  componentDidMount() {
-    // this.shuffleSigns(this.state.signs);
-  }
-
   // * This method, which took a lot of searching and finagling, is apparently called the "Durstenfeld shuffle algorithm" for shuffling an array, it was confirmed as 'how to do it' by Dan before class
 
   shuffleSigns = array => {
@@ -36,15 +31,11 @@ class App extends Component {
   // * Here is where we handle guessee. It uses a switch system based on the "picked" boolean of the record chosen
   handleGuess = id => {
     const newSign = this.state.signs[id - 1];
-    console.log(
-      `you clicked on ID = ${id}, ${newSign.sign}, the picked is ${newSign.picked} and whos ID is ${newSign.id}`
-    );
 
     switch (newSign.picked) {
       case true:
         // * User has lost, reset the score and let them know about it
         this.setState({ score: 0, message: "Bad Pick! Game Over" });
-
 
         // * Here we reset all the cards so that the "picked" in thier records are set back to "False"
         signs.forEach(element => {
@@ -73,7 +64,7 @@ class App extends Component {
     this.setState({ signs });
   };
 
-// * Render the home page
+  // * Render the home page
   render() {
     return (
       <Wrapper>
@@ -90,7 +81,7 @@ class App extends Component {
                 id={sign.id}
                 key={sign.id}
                 sign={sign.sign}
-                image={sign.svg}
+                image={sign.wiki_svg}
                 unicode={sign.unicode_symbol}
                 picked={sign.picked}
               />
