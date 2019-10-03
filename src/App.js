@@ -35,7 +35,10 @@ class App extends Component {
     switch (newSign.picked) {
       case true:
         // * User has lost, reset the score and let them know about it
-        this.setState({ score: 0, message: "Bad Pick! Game Over" });
+        this.setState({
+          score: 0,
+          message: "Bad Pick! Game Over. Click to play again"
+        });
 
         // * Here we reset all the cards so that the "picked" in thier records are set back to "False"
         signs.forEach(element => {

@@ -13,5 +13,4 @@ Hey look at that!
 
 ## Difficulties
 
-The  hurdle was shuffling the display of the cards. I was able to do it, but it threw other things off. I ended up performing shuffle on the mapped array of Sign Components.
-
+The hurdle was shuffling the display of the cards. I was able to do it, but it threw other things off. I ended up performing shuffle on the mapped array of Sign Components.
